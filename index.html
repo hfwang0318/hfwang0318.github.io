@@ -96,7 +96,8 @@
 
 
 
-  <meta property="og:type" content="website">
+  <meta name="keywords" content="MachineLeaning, DeepLeaning">
+<meta property="og:type" content="website">
 <meta property="og:title" content="hfwang&#39;s blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="hfwang&#39;s blog">
@@ -347,7 +348,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/03/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="haofanwang">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -394,6 +395,7 @@
 
             
           </span>
+
 
           
 
@@ -500,7 +502,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="haofanwang">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -547,6 +549,7 @@
 
             
           </span>
+
 
           
 
@@ -675,7 +678,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="haofanwang">
+            
+              <p class="site-author-name" itemprop="name">haofanwang</p>
               <div class="site-description motion-element" itemprop="description"></div>
           </div>
 
@@ -731,6 +736,16 @@
           
 
           
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
 
           
           
@@ -762,7 +777,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">haofanwang</span>
 
   
 
@@ -886,6 +901,36 @@
   
 
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'N4KFVH1bCseolnD9xzxcQdHq-gzGzoHsz',
+    appKey: 'skk1lemqAl9LCgdWOeYVBuj6',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
 
 
 
