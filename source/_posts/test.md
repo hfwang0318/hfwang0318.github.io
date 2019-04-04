@@ -1,7 +1,8 @@
 ---
 title: test
 date: 2019-04-03 00:22:59
-tags: categories
+tags: [net, loss, optimizer]
+categories: deep learning
 ---
 
 # 一级标题
