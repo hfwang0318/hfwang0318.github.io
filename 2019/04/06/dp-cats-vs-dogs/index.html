@@ -96,14 +96,22 @@
 
 
 
-  <meta name="keywords" content="MachineLeaning, DeepLeaning">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hfwang&#39;s blog">
-<meta property="og:url" content="https://hfwang0318.github.io/index.html">
+  <meta name="description" content="1. 前言猫狗大战是一个非常经典的二分类问题，其任务目标是让模型学习到区分猫和狗的能力。在这个问题中 kaggle 已经有很多大神达到了非常不错的精准度。我接触深度学习目前有半年多的时间了，基本能够熟练地使用 tensorflow，但仍然有很多特性我没有接触过，故本文旨在进一步加深自己对 tensorflow 框架的理解和练习，选择使用猫狗大战这一项目进行试验。 注：本文均采取先将某个功能模块整体">
+<meta name="keywords" content="DeepLearning,Tensorflow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="kaggle 竞赛——Cats vs Dogs">
+<meta property="og:url" content="https://hfwang0318.github.io/2019/04/06/dp-cats-vs-dogs/index.html">
 <meta property="og:site_name" content="hfwang&#39;s blog">
+<meta property="og:description" content="1. 前言猫狗大战是一个非常经典的二分类问题，其任务目标是让模型学习到区分猫和狗的能力。在这个问题中 kaggle 已经有很多大神达到了非常不错的精准度。我接触深度学习目前有半年多的时间了，基本能够熟练地使用 tensorflow，但仍然有很多特性我没有接触过，故本文旨在进一步加深自己对 tensorflow 框架的理解和练习，选择使用猫狗大战这一项目进行试验。 注：本文均采取先将某个功能模块整体">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://hfwang0318.github.io/2019/04/06/dp-cats-vs-dogs/kaggle-tree.png">
+<meta property="og:image" content="https://hfwang0318.github.io/2019/04/06/dp-cats-vs-dogs/kaggle-test1.png">
+<meta property="og:image" content="https://hfwang0318.github.io/2019/04/06/dp-cats-vs-dogs/kaggle-train.png">
+<meta property="og:updated_time" content="2019-04-07T18:08:58.552Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hfwang&#39;s blog">
+<meta name="twitter:title" content="kaggle 竞赛——Cats vs Dogs">
+<meta name="twitter:description" content="1. 前言猫狗大战是一个非常经典的二分类问题，其任务目标是让模型学习到区分猫和狗的能力。在这个问题中 kaggle 已经有很多大神达到了非常不错的精准度。我接触深度学习目前有半年多的时间了，基本能够熟练地使用 tensorflow，但仍然有很多特性我没有接触过，故本文旨在进一步加深自己对 tensorflow 框架的理解和练习，选择使用猫狗大战这一项目进行试验。 注：本文均采取先将某个功能模块整体">
+<meta name="twitter:image" content="https://hfwang0318.github.io/2019/04/06/dp-cats-vs-dogs/kaggle-tree.png">
 
 
 
@@ -111,7 +119,7 @@
 
   
   
-  <link rel="canonical" href="https://hfwang0318.github.io/">
+  <link rel="canonical" href="https://hfwang0318.github.io/2019/04/06/dp-cats-vs-dogs/">
 
 
 
@@ -121,7 +129,7 @@
   };
 </script>
 
-  <title>hfwang's blog</title>
+  <title>kaggle 竞赛——Cats vs Dogs | hfwang's blog</title>
   
 
 
@@ -169,8 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -208,7 +215,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -328,9 +335,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -362,10 +369,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/06/dp-cats-vs-dogs/" class="post-title-link" itemprop="url">kaggle 竞赛——Cats vs Dogs</a>
+          <h1 class="post-title" itemprop="name headline">kaggle 竞赛——Cats vs Dogs
+
               
             
           </h1>
@@ -436,6 +441,19 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/04/06/dp-cats-vs-dogs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/06/dp-cats-vs-dogs/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -471,9 +489,7 @@
       
 
       
-        
-          
-            <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>猫狗大战是一个非常经典的二分类问题，其任务目标是让模型学习到区分猫和狗的能力。在这个问题中 kaggle 已经有很多大神达到了非常不错的精准度。我接触深度学习目前有半年多的时间了，基本能够熟练地使用 tensorflow，但仍然有很多特性我没有接触过，故<strong>本文旨在进一步加深自己对 tensorflow 框架的理解和练习</strong>，选择使用猫狗大战这一项目进行试验。</p>
+        <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>猫狗大战是一个非常经典的二分类问题，其任务目标是让模型学习到区分猫和狗的能力。在这个问题中 kaggle 已经有很多大神达到了非常不错的精准度。我接触深度学习目前有半年多的时间了，基本能够熟练地使用 tensorflow，但仍然有很多特性我没有接触过，故<strong>本文旨在进一步加深自己对 tensorflow 框架的理解和练习</strong>，选择使用猫狗大战这一项目进行试验。</p>
 <p><strong><em>注：本文均采取先将某个功能模块整体展示，再对其中某些细节和代码进行补充说明</em></strong></p>
 <h1 id="2-题目分析"><a href="#2-题目分析" class="headerlink" title="2. 题目分析"></a>2. 题目分析</h1><h2 id="2-1-数据集结构"><a href="#2-1-数据集结构" class="headerlink" title="2.1. 数据集结构"></a>2.1. 数据集结构</h2><p>其数据集包括以下两个部分:</p>
 <p><img src="/2019/04/06/dp-cats-vs-dogs/kaggle-tree.png" alt></p>
@@ -507,8 +523,6 @@
 <h1 id="3-结果"><a href="#3-结果" class="headerlink" title="3. 结果"></a>3. 结果</h1><p>我的运行环境如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">操作系统: linux <span class="number">16.04</span></span><br><span class="line">cuda 及 cudnn 版本: cuda <span class="number">10.0</span> + cudnn <span class="number">7.5</span></span><br><span class="line">显卡: <span class="number">2080</span> ti</span><br><span class="line">num_epochs: <span class="number">27</span></span><br><span class="line">total_steps: <span class="number">16500</span></span><br><span class="line">val_acc: <span class="number">0.968</span></span><br><span class="line">val_mean_loss: <span class="number">0.128</span></span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
 
@@ -520,6 +534,12 @@
 
     <div>
   
+    <div>
+
+    <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+
+</div>
+  
     </div>
 
     
@@ -530,384 +550,65 @@
     
 
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hfwang0318.github.io/2019/04/03/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="haofanwang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hfwang's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/03/test/" class="post-title-link" itemprop="url">test</a>
-              
-            
-          </h1>
+      <div>
         
 
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-03 00:22:59 / 修改时间：13:34:02" itemprop="dateCreated datePublished" datetime="2019-04-03T00:22:59+08:00">2019-04-03</time>
-            
-
-            
-              
-
-              
-            
-          </span>
 
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/deep-learning/" itemprop="url" rel="index"><span itemprop="name">deep learning</span></a></span>
 
-                
-                
-              
-            </span>
-          
+  
 
-          
-            
-            
-          
 
-          
-          
-            <span id="/2019/04/03/test/" class="leancloud_visitors" data-flag-title="test">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
 
-          
-
-          
-
-          
-
-        </div>
-      </header>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>haofanwang</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p><del>delete</del></p>
-<p><u>下划</u></p>
-<blockquote>
-<p>引用</p>
-</blockquote>
-<p><code>one line code</code></p>
-<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="built_in">os</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">os</span>.listdir(<span class="built_in">os</span>.getcwd())</span><br></pre></td></tr></table></figure>
-<p>$$<br>f(x) = x^2 + 2<br>$$</p>
-<hr>
-<p>+++</p>
-<hr>
-<ol>
-<li>1</li>
-<li>s</li>
-<li>f</li>
-</ol>
-<ul>
-<li>ddd</li>
-<li>dd</li>
-<li>ss</li>
+    <a href="https://hfwang0318.github.io/2019/04/06/dp-cats-vs-dogs/" title="kaggle 竞赛——Cats vs Dogs">https://hfwang0318.github.io/2019/04/06/dp-cats-vs-dogs/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
 </ul>
-<ul>
-<li>ss</li>
-<li>ss</li>
-</ul>
-<p><a href="www.baidu.com">百度</a></p>
-<p>&lt;<a href="http://www.baidu.com&gt;" target="_blank" rel="noopener">www.baidu.com&gt;</a></p>
-<p><img src="/2019/04/03/test/avatar.gif" alt="图1" title="figure1"></p>
 
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-  
-    </div>
-
-    
-
-    
-      
-    
-    
-
+      </div>
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hfwang0318.github.io/2019/04/02/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="haofanwang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hfwang's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/02/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-02 01:36:23" itemprop="dateCreated datePublished" datetime="2019-04-02T01:36:23+08:00">2019-04-02</time>
-            
-
-            
-          </span>
-
-
+        <div class="post-tags">
           
-
+            <a href="/tags/DeepLearning/" rel="tag"># DeepLearning</a>
           
-            
-            
+            <a href="/tags/Tensorflow/" rel="tag"># Tensorflow</a>
           
-
-          
-          
-            <span id="/2019/04/02/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-  
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/03/test/" rel="next" title="test">
+                <i class="fa fa-chevron-left"></i> test
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -917,14 +618,19 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -944,8 +650,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1073,6 +788,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-前言"><span class="nav-number">1.</span> <span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-题目分析"><span class="nav-number">2.</span> <span class="nav-text">2. 题目分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-数据集结构"><span class="nav-number">2.1.</span> <span class="nav-text">2.1. 数据集结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-数据预处理"><span class="nav-number">2.2.</span> <span class="nav-text">2.2. 数据预处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-网络结构"><span class="nav-number">2.3.</span> <span class="nav-text">2.3. 网络结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-训练"><span class="nav-number">2.4.</span> <span class="nav-text">2.4. 训练</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-结果"><span class="nav-number">3.</span> <span class="nav-text">3. 结果</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1204,6 +936,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -1250,6 +986,8 @@
 
 
 
+  
+
 
   
 
@@ -1260,38 +998,32 @@
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
           }
         })
         .fail(function ({ responseJSON }) {
@@ -1316,9 +1048,7 @@
             });
           };
           
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
+            addCount(Counter);
           
         });
     });
